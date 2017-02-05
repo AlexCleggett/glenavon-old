@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @customer_order.business_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer_order.address %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @customer_order.contact_person %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @customer_order.phone_number %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @customer_order.mobile_number %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @customer_order.email_address %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @customer_order.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @customer_order.year %>
+</p>
+
+<% @customer_order.vine_orders.each do |vine_order| %>
+<p>
+  <strong>Variety:</strong>
+  <%= vine_order.variety %>
+</p>
+<% end %>
+
+
+<%= link_to 'Edit', order_path %> 
+<%= link_to 'Submit!', submit_path %>

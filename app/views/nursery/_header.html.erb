@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Glenavon Nurseries</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li class= "<%= @class1 == 'home' ? 'current' : ''%>"><%= link_to "Home", :controller => :nursery, :action => :index %></li>
+      <li class= "<%= @class1 == 'about' ? 'dropdown current' : 'dropdown' %>">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="products">About Us
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class= "<%= @class2 == 'products' ? 'current' : ''%>"><%= link_to "Products And Services", :controller => :nursery, :action => :products %></li>
+          <li class= "<%= @class2 == 'history' ? 'current' : ''%>"><%= link_to "History", :controller => :nursery, :action => :history %></li>
+          <li class= "<%= @class2 == 'accreditations' ? 'current' : ''%>"><%= link_to "Accreditations", :controller => :nursery, :action => :accreditations %></li>
+        </ul>
+      </li>
+      <li class= "<%= @class1 == 'order' ? 'current' : ''%>"><%= link_to "Order Vines", :controller => :nursery, :action => :order %></li>
+      <li class= "<%= @class1 == 'variety' ? 'dropdown current' : 'dropdown' %>">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="vines">Varieties
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class= "<%= @class2 == 'vines' ? 'current' : ''%>"><%= link_to "Vines", :controller => :nursery, :action => :vines %></li>
+          <li class= "<%= @class2 == 'rootstocks' ? 'current' : ''%>"><%= link_to "Rootstocks", :controller => :nursery, :action => :rootstocks %></li>
+        </ul>
+      </li>
+      <li class= "<%= @class1 == 'info' ? 'dropdown current' : 'dropdown' %>">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="gallery">Extra Info
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+          <li class= "<%= @class2 == 'gallery' ? 'current' : ''%>"><%= link_to "Gallery", :controller => :nursery, :action => :gallery %></li>
+          <li class= "<%= @class2 == 'planting' ? 'current' : ''%>"><%= link_to "Planting Guide", :controller => :nursery, :action => :planting %></li>
+          <li class= "<%= @class2 == 'links' ? 'current' : ''%>"><%= link_to "Links", :controller => :nursery, :action => :links %></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>

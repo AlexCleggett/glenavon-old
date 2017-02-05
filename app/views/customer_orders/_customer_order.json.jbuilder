@@ -1,0 +1,2 @@
+json.extract! customer_order, :id, :business_name, :address, :contact_person, :phone_number, :mobile_number, :email_address, :month, :year, :created_at, :updated_at
+json.url customer_order_url(customer_order, format: :json)

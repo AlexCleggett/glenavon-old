@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Glenavon Nurseries</title>
+        <%= javascript_include_tag "vine_order" %>
+       <%= stylesheet_link_tag "bootstrap" %>
+        <%= stylesheet_link_tag "base" %>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    
+    <body >
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Glenavon Nurseries</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", :controller => :nursery, :action => :index %></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="products">About Us
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Products And Services", :controller => :nursery, :action => :products %></li>
+          <li><%= link_to "History", :controller => :nursery, :action => :history %></li>
+          <li><%= link_to "Accreditations", :controller => :nursery, :action => :accreditations %></li>
+        </ul>
+      </li>
+      <li class = "current"><%= link_to "Order Vines", :controller => :nursery, :action => :order %></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="vines">Varieties
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Vines", :controller => :nursery, :action => :vines %></li>
+          <li><%= link_to "Rootstocks", :controller => :nursery, :action => :rootstocks %></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="gallery">Extra Info
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+          <li><%= link_to "Gallery", :controller => :nursery, :action => :gallery %></li>
+          <li><%= link_to "Planting Guide", :controller => :nursery, :action => :planting %></li>
+          <li><%= link_to "Links", :controller => :nursery, :action => :links %></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Order Vines</h1>
+                <br>
+              </div>
+        </div>
+    </div>
+          <div class="container-fluid">
+              <%= render 'form' %>
+          </div>
+<%= @params %>
+		<!-- Footer Links -->
+		<div class="footer-info">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-6 footer-info-item">
+						<h3>Information</h3>
+						<ul class="list-unstyled">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Customer Service</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Orders &amp; Returns</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6 footer-info-item">
+						<h3>My Account</h3>
+						<ul class="list-unstyled">
+							<li class = "ab"><a class="ab", href="#">Sign In</a></li>
+							<li><a href="#">View Cart</a></li>
+							<li><a href="#">My Wishlist</a></li>
+							<li><a href="#">Track My Order</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>	
+					</div>
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+       
+        
+        </div>
+
+	
+        <!-- Copyright etc -->
+        <div class="small-print">
+        	<div class="container-fluid">
+        		<p>Copyright &copy; Glenavon Nurseries 2016 </p>
+        	</div>
+        </div>
+        
+    </body>
+</html>
+
+

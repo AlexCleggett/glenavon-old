@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Glenavon Nurseries</title>
+        
+       <%= stylesheet_link_tag "bootstrap" %>
+        <%= stylesheet_link_tag "base" %>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <%= javascript_include_tag "vine_order" %>
+        <%= javascript_include_tag "application" %>
+    </head>
+    
+    <body >
+         <%= render 'header' %>
+        
+    <div class="continer-fluid form-outer">
+      <div class="container-fluid form-inner">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Order Vines</h1>
+                <br>
+              </div>
+        </div>
+    
+          <div class="container-fluid">
+              <%= render 'form' %>
+          </div>
+          </div>
+          </div>
+<%= @params %>
+		 
+        <%= render 'footer' %>
+    </body>
+</html>
+
+
