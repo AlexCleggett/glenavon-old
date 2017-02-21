@@ -39,6 +39,8 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    blueimp-gallery (2.11.0.1)
+      railties (>= 3.1.0)
     builder (3.2.2)
     byebug (9.0.6)
     cocoon (1.2.9)
@@ -147,6 +149,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blueimp-gallery
   byebug
   cocoon
   coffee-rails (~> 4.1.0)

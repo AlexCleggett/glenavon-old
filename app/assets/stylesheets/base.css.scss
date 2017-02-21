@@ -126,3 +126,16 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     background-color: #BBB;
 }
   
+.carousel-control {
+
+    width: 30px; // no more gray thing
+
+}
+.carousel-control .icon-next {
+  right: 40;  //or you can increase this
+}
+
+.carousel-control .icon-prev {
+  left: 20; //or you can increase this
+}
+ 

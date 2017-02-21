@@ -13,6 +13,7 @@ class NurseryController < ActionController::Base
   def gallery
     @class1 = "info"
     @class2 = "gallery"
+    @images = Dir.glob("app/assets/images/carousel/*.jpg")
   end
   
   def history

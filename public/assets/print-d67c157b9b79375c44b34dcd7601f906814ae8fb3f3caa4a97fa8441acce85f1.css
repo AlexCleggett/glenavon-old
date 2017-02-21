@@ -1,0 +1,6 @@
+@media print {
+  /* line 2, /home/ubuntu/workspace/app/assets/stylesheets/print.css.scss */
+  h1 {
+    display: none;
+  }
+}

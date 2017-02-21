@@ -1,0 +1,15 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/vines.css.scss */
+.nav-tabs > li, .nav-pills > li {
+  margin-top: 50px;
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+  zoom: 1;
+  /* hasLayout ie7 trigger */
+}
+
+/* line 9, /home/ubuntu/workspace/app/assets/stylesheets/vines.css.scss */
+.nav-tabs, .nav-pills {
+  text-align: center;
+}

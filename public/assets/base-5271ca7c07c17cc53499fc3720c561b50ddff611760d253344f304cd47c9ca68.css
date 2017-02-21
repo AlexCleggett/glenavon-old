@@ -1,0 +1,153 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+body {
+  margin: 0;
+  margin-top: 50px;
+}
+
+/* line 7, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+/* line 13, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+li {
+  text-align: center;
+}
+
+/* line 19, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar a {
+  color: #222222 !important;
+}
+
+/* line 23, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar a:hover {
+  color: #BBBBBB !important;
+}
+
+/* line 27, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar li:hover, .navbar > li:active {
+  background: #661166;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#661166, #882288);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#661166, #882288);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#661166, #882288);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#661166, #882288);
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background: #661166;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#661166, #882288);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#661166, #882288);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#661166, #882288);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#661166, #882288);
+  color: #BBBBBB !important;
+}
+
+/* line 47, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+/* line 51, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 56, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar-nav li .dropdown-menu a {
+  color: #222222 !important;
+}
+
+/* line 60, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.navbar-nav li .dropdown-menu a:hover {
+  color: #BBBBBB !important;
+}
+
+/* line 64, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.dropdown-menu > li > a:hover {
+  background: #661166;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#661166, #882288);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#661166, #882288);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#661166, #882288);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#661166, #882288) !important;
+}
+
+/* line 72, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.current, .current:hover {
+  background: #99CC99;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#99CC99, #CCCCCC);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#99CC99, #CCCCCC);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#99CC99, #CCCCCC);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#99CC99, #CCCCCC);
+}
+
+/* line 80, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.footer-info {
+  background: #333333;
+  padding-bottom: 10px;
+}
+
+/* line 87, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.footer-info,
+.footer-info a:link,
+.footer-info a:hover,
+.footer-info a:focus,
+.footer-info a:visited {
+  color: #DDDDDD;
+}
+
+/* line 95, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.footer-info h3 {
+  color: #DDDDDD;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 101, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.footer-info-item {
+  padding: 0px 20px;
+}
+
+/* line 106, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.ab, .list-unstyled, .footer-info-item {
+  color: #009900;
+}
+
+/* line 110, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.small-print {
+  background-color: #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* line 118, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.form-inner {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+}
+
+/* line 125, /home/ubuntu/workspace/app/assets/stylesheets/base.css.scss */
+.form-outer {
+  background-color: #BBB;
+}
