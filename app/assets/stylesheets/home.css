@@ -45,15 +45,15 @@
 }
  
 .item-1 {
-	background: url("/assets/images/vines.jpg");
+ background-image: url('vines.jpg');
 	}
 	
 .item-2 {
-	background: url("/assets/images/vines.jpg");
+	background-image: url('vines.jpg');
 	}
 	
 .item-3 {
-	background: url("/assets/images/vines.jpg");
+	background-image: url('vines.jpg');
 	}
 		
 .item-1,
