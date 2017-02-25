@@ -21,14 +21,7 @@
         </ul>
       </li>
       <li class= "<%= @class1 == 'order' ? 'current' : ''%>"><%= link_to "Order Vines", :controller => :nursery, :action => :order %></li>
-      <li class= "<%= @class1 == 'variety' ? 'dropdown current' : 'dropdown' %>">
-        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="vines">Varieties
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class= "<%= @class2 == 'vines' ? 'current' : ''%>"><%= link_to "Vines", :controller => :nursery, :action => :vines %></li>
-          <li class= "<%= @class2 == 'rootstocks' ? 'current' : ''%>"><%= link_to "Rootstocks", :controller => :nursery, :action => :rootstocks %></li>
-        </ul>
-      </li>
+      <li class= "<%= @class1 == 'varieties' ? 'current' : ''%>"><%= link_to "Varieties", :controller => :nursery, :action => :varieties %></li>
       <li class= "<%= @class1 == 'info' ? 'dropdown current' : 'dropdown' %>">
         <a class="dropdown-toggle disabled" data-toggle="dropdown" href="gallery">Extra Info
         <span class="caret"></span></a>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Glenavon Nurseries</title>
+        
+        
+        <%= stylesheet_link_tag "bootstrap" %>
+        <%= stylesheet_link_tag "base" %>
+        <%= stylesheet_link_tag "vines" %>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    
+    <body >
+        <%= render 'header' %>
+        
+       <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#vines">Vines</a></li>
+          <li><a data-toggle="tab" href="#rootstocks">Rootstocks</a></li>
+       </ul>    
+      
+      
+      <div class="tab-content">
+        <div id="vines" class="tab-pane fade in active">
+          <div class="container-fluid varieties-container">
+            <div class="panel-group" id="accordion-vines">
+            <% @vines.each_with_index do |vine, index| %>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion-vines" href="#collapse-vines-outer<%= index+1 %>">
+                        <%= vine.name %>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse-vines-outer<%= index+1 %>" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <%= vine.colour %>
+                      <%= vine.comment %>
+                      
+                      <div class="panel-group" id="accordion-vines<%= index+1 %>">
+                        <% vine.clones.each_with_index do |clone, index2| %>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a data-toggle="collapse" data-parent="#accordion-vines<%= index+1 %>" href="#collapse-vines-inner<%= index2+1 %>">
+                                    <%= clone.name %>
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapse-vines-inner<%= index2+1 %>" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <%= clone.comment %>
+                                </div>
+                              </div>
+                            </div>
+                          <% end %>
+                        </div>
+                      
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        
+        <div id="rootstocks" class="tab-pane fade">
+          <div class="container-fluid varieties-container">
+            <div class="panel-group" id="accordion-rootstocks">
+            <% @rootstocks.each_with_index do |rootstock, index| %>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion-rootstocks" href="#collapse-rootstocks<%= index+1 %>">
+                        <%= rootstock.name %>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse-rootstocks<%= index+1 %>" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <%= rootstock.comment %>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>       
+          </div>
+        </div>
+      </div>
+
+        <%= render 'footer' %>
+        
+    </body>
+</html>

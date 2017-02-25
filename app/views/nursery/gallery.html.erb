@@ -21,69 +21,61 @@
     
     <body >
         <%= render 'header' %>
-        
-        <div class="container-fluid">
-
-           
-            <div class="row">
-                <% @images.each_with_index do |image, index| %>
-                    <div class="col-xs-6 col-sm-4 col-md-3 thumbnail">
-                        <a href="#gallery" data-slide-to="<%= index %>" >
-                          <%= image_tag "carousel/#{image.split('/').last}", :data => { :toggle => 'modal', :target => '#myModal' } %>
-                        </a>
-                    </div>
-                 <% end %>
-                 
-                 
-                 
-         </div>
-        </div>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-            <div class="modal-body">
-
-  <div id="gallery" class="carousel slide" data-interval="false">
-    <!-- Indicators -->
-
-
-    <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                          <% @images.each_with_index do |image, index| %>
-                            <div class="item <%= 'active' if index == 0 %>">
+        <ul class="nav nav-tabs gallery-tabs">
+            <li class="active"><a data-toggle="tab" href="#images">Images</a></li>
+            <li><a data-toggle="tab" href="#videos">Videos</a></li>
+          
+        </ul>
+        <div class="tab-content">
+            <div id="images" class="tab-pane fade in active">
+                <div class="container-fluid gallery-container">
+                    <div class="row">
+                        <% @images.each_with_index do |image, index| %>
+                            <div class="col-xs-6 col-sm-4 col-md-3 thumbnail">
+                                <a href="#gallery" data-slide-to="<%= index %>" >
+                                  <%= image_tag "carousel/#{image.split('/').last}", :data => { :toggle => 'modal', :target => '#myModal' } %>
+                                </a>
+                            </div>
+                         <% end %>
+                     </div>
+                </div>
+                
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                
+                                  <div id="gallery" class="carousel slide" data-interval="false">
+            
+                                      <div class="carousel-inner">
+                                          <% @images.each_with_index do |image, index| %>
+                                            <div class="item <%= 'active' if index == 0 %>">
+                                        
+                                              <%= image_tag "carousel/#{image.split('/').last}", :alt => image %>
+                                                <div class="carousel-caption">
+                                                
+                                                    <p>This is the description.</p>
+                                                </div>
+                                            </div>
+                                        <% end %>
+                                    </div>
+                                    
+                    <!-- Left and right controls -->
+                                    <a class="carousel-control left" href="#gallery" role="button" data-slide="prev"><span class="icon-prev"></span></a>
+                                    <a class="carousel-control right" href="#gallery" role="button" data-slide="next"><span class="icon-next"></span></a>
                         
-                              <%= image_tag "carousel/#{image.split('/').last}", :alt => image %>
-                                <div class="carousel-caption">
-                                
-                                    <p>This is the description.</p>
                                 </div>
                             </div>
-                            <% end %>
-              
-                        <div class="item">
-                            <div align="center">
-                                   <video loop controls>
-                                     <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" width="1024" height="552" type="video/mp4">
-                                     Your browser does not support the video tag.
-                                  </video>
-                              </div>
-                                 <div class="carousel-caption">
-                                  <h3>hello</h3>
-                                  <p>hello</p>
-                                </div>
                         </div>
                     </div>
-    <!-- Left and right controls -->
-    <a href="#gallery" data-slide="prev"><span class="icon-prev"></span></a>
-                    <a class="carousel-control right" href="#gallery" role="button" data-slide="next"><span class="icon-next"></span></a>
-                
-  </div>
-</div>
+                </div>
+            </div>
+        <div id="videos" class="tab-pane fade">   
+            <div class="container-fluid gallery-container">
+            </div>
         </div>
     </div>
-</div>
-      </div>
+
         <%= render 'footer' %>
         
         

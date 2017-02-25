@@ -32,18 +32,13 @@ class NurseryController < ActionController::Base
      @class1 = "home"
    end
    
-   def vines
-     @class1 = "variety"
-     @class2 = "vines"
-       @vines = Vine.all
+   def varieties
+      @class1 = "varieties"
+      @vines = Vine.all
+      @rootstocks = Rootstock.all
    end
    
-   def rootstocks
-     @class1 = "variety"
-     @class2 = "rootstocks"
-      @rootstocks = Rootstock.all
-      
-   end
+
    
    def planting
      @class1 = "info"
