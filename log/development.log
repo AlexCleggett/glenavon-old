@@ -1,0 +1,1553 @@
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:07:40 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered nursery/_header.html.erb (2.4ms)
+  Rendered nursery/_footer.html.erb (0.3ms)
+  Rendered nursery/index.html.erb (552.0ms)
+Completed 200 OK in 572ms (Views: 562.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 06:07:42 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 06:07:42 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:07:43 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 06:07:43 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36m (10.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (6.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePhrasingPhrases (20170226062230)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/workspace/db/migrate/20170226062230_create_phrasing_phrases.phrasing_rails_engine.rb:8)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "phrasing_phrases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "locale" varchar, "key" varchar, "value" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170226062230"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Migrating to CreatePhrasingPhraseVersions (20170226062231)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/workspace/db/migrate/20170226062231_create_phrasing_phrase_versions.phrasing_rails_engine.rb:7)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "phrasing_phrase_versions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phrasing_phrase_id" integer, "value" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_phrasing_phrase_versions_on_phrasing_phrase_id" ON "phrasing_phrase_versions" ("phrasing_phrase_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170226062231"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_phrasing_phrase_versions_on_phrasing_phrase_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_phrasing_phrase_versions_on_phrasing_phrase_id' AND type='index'
+[0m
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:25:45 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NurseryController#index as HTML
+  Rendered nursery/index.html.erb (13.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'phrasing' with type 'text/css'
+Checked in these paths: 
+  /home/ubuntu/workspace/app/assets/images
+  /home/ubuntu/workspace/app/assets/javascripts
+  /home/ubuntu/workspace/app/assets/stylesheets
+  /home/ubuntu/workspace/vendor/assets/javascripts
+  /home/ubuntu/workspace/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/images
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/cocoon-1.2.9/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    12:         <%= stylesheet_link_tag "bootstrap" %>
+    13:         <%= stylesheet_link_tag "home" %>
+    14:         <%= stylesheet_link_tag "base" %>
+    15:         <%= stylesheet_link_tag "application" %>
+    16:         <%= render 'phrasing/initializer' %>     
+    17:         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    18:         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  app/assets/stylesheets/application.css:15
+  app/views/nursery/index.html.erb:15:in `_app_views_nursery_index_html_erb__3756437695436613411_70203499298320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:26:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered nursery/index.html.erb (22.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'phrasing' with type 'text/css'
+Checked in these paths: 
+  /home/ubuntu/workspace/app/assets/images
+  /home/ubuntu/workspace/app/assets/javascripts
+  /home/ubuntu/workspace/app/assets/stylesheets
+  /home/ubuntu/workspace/vendor/assets/javascripts
+  /home/ubuntu/workspace/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/images
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/cocoon-1.2.9/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    12:         <%= stylesheet_link_tag "bootstrap" %>
+    13:         <%= stylesheet_link_tag "home" %>
+    14:         <%= stylesheet_link_tag "base" %>
+    15:         <%= stylesheet_link_tag "application" %>
+    16:         <%= render 'phrasing/initializer' %>     
+    17:         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    18:         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  app/assets/stylesheets/application.css:15
+  app/views/nursery/index.html.erb:15:in `_app_views_nursery_index_html_erb__3756437695436613411_70203513171600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:27:20 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered nursery/index.html.erb (3.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial phrasing/_initializer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+):
+     8: 
+     9:         <title>Glenavon Nurseries</title>
+    10:         
+    11:         <%= render 'phrasing/initializer' %> 
+    12:         <%= stylesheet_link_tag "bootstrap" %>
+    13:         <%= stylesheet_link_tag "home" %>
+    14:         <%= stylesheet_link_tag "base" %>
+  app/views/nursery/index.html.erb:11:in `_app_views_nursery_index_html_erb__3756437695436613411_24290100'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:28:41 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered nursery/index.html.erb (14.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'phrasing' with type 'text/css'
+Checked in these paths: 
+  /home/ubuntu/workspace/app/assets/images
+  /home/ubuntu/workspace/app/assets/javascripts
+  /home/ubuntu/workspace/app/assets/stylesheets
+  /home/ubuntu/workspace/vendor/assets/javascripts
+  /home/ubuntu/workspace/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/images
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/cocoon-1.2.9/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    12:         <%= stylesheet_link_tag "bootstrap" %>
+    13:         <%= stylesheet_link_tag "home" %>
+    14:         <%= stylesheet_link_tag "base" %>
+    15:         <%= stylesheet_link_tag "application" %>
+    16:             
+    17:         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    18:         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  app/assets/stylesheets/application.css:15
+  app/views/nursery/index.html.erb:15:in `_app_views_nursery_index_html_erb__3756437695436613411_70203500566800'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.1ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:29:32 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered nursery/index.html.erb (12.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'phrasing' with type 'text/css'
+Checked in these paths: 
+  /home/ubuntu/workspace/app/assets/images
+  /home/ubuntu/workspace/app/assets/javascripts
+  /home/ubuntu/workspace/app/assets/stylesheets
+  /home/ubuntu/workspace/vendor/assets/javascripts
+  /home/ubuntu/workspace/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/images
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/blueimp-gallery-2.11.0.1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/cocoon-1.2.9/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    12:         <%= stylesheet_link_tag "bootstrap" %>
+    13:         <%= stylesheet_link_tag "home" %>
+    14:         <%= stylesheet_link_tag "base" %>
+    15:         <%= stylesheet_link_tag "application" %>
+    16:         
+    17:         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    18:         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  app/assets/stylesheets/application.css:15
+  app/views/nursery/index.html.erb:15:in `_app_views_nursery_index_html_erb__3756437695436613411_70203498972760'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.8ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:33:07 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (3.6ms)
+  Rendered nursery/_header.html.erb (8.3ms)
+  Rendered nursery/_footer.html.erb (0.3ms)
+  Rendered nursery/index.html.erb (830.0ms)
+Completed 200 OK in 850ms (Views: 840.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 06:33:09 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:33:09 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:33:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:33:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:34:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.9ms)
+  Rendered nursery/_header.html.erb (3.9ms)
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (98.6ms)
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:34:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 06:34:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 06:34:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 06:34:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 06:34:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:34:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:34:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/phrasing" for 123.3.108.94 at 2017-02-26 06:34:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#index as HTML
+  [1m[35mPhrasingPhrase Load (0.3ms)[0m  SELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is not null)  ORDER BY "phrasing_phrases"."key" ASC  [["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is null)  ORDER BY "phrasing_phrases"."key" ASC[0m  [["locale", "en"]]
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "phrasing_phrases"."locale" FROM "phrasing_phrases"
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/index.html.haml within layouts/phrasing (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (1.0ms)
+Completed 200 OK in 97ms (Views: 77.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:35:07 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.7ms)
+  Rendered nursery/_header.html.erb (2.8ms)
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND "phrasing_phrases"."key" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["locale", "en"], ["key", "my-first-phrase"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  [["key", "my-first-phrase"], ["locale", "en"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "phrasing_phrases" ("locale", "key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locale", "en"], ["key", "my-first-phrase"], ["value", "my-first-phrase"], ["created_at", "2017-02-26 06:35:07.670706"], ["updated_at", "2017-02-26 06:35:07.670706"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (77.9ms)
+Completed 200 OK in 81ms (Views: 69.0ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:35:08 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:35:09 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:35:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=1&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 06:35:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"Abcd", "attribute"=>"value", "id"=>"1", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[36mPhrasingPhrase Load (0.3ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "phrasing_phrases" SET "value" = ?, "updated_at" = ? WHERE "phrasing_phrases"."id" = ?[0m  [["value", "Abcd"], ["updated_at", "2017-02-26 06:35:28.014592"], ["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["phrasing_phrase_id", 1], ["value", "Abcd"], ["created_at", "2017-02-26 06:35:28.032108"], ["updated_at", "2017-02-26 06:35:28.032108"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:35:46 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.0ms)
+  Rendered nursery/_header.html.erb (3.1ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (49.3ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:35:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 06:35:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 06:35:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 06:35:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:35:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:36:25 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.7ms)
+  Rendered nursery/_header.html.erb (2.6ms)
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (28.5ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:36:26 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:36:26 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:36:26 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 06:37:02 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.8ms)
+  Rendered nursery/_header.html.erb (2.8ms)
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (43.3ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:03 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:03 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:04 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 06:37:05 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 06:37:06 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=1&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 06:37:21 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"G<br>", "attribute"=>"value", "id"=>"1", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "phrasing_phrases" SET "value" = ?, "updated_at" = ? WHERE "phrasing_phrases"."id" = ?[0m  [["value", "G<br>"], ["updated_at", "2017-02-26 06:37:21.689381"], ["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["phrasing_phrase_id", 1], ["value", "G<br>"], ["created_at", "2017-02-26 06:37:21.690551"], ["updated_at", "2017-02-26 06:37:21.690551"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 7.9ms)
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=1&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 06:38:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest nurseries in Australia.<br>", "attribute"=>"value", "id"=>"1", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "phrasing_phrases" SET "value" = ?, "updated_at" = ? WHERE "phrasing_phrases"."id" = ?  [["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest nurseries in Australia.<br>"], ["updated_at", "2017-02-26 06:38:10.707382"], ["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phrasing_phrase_id", 1], ["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest nurseries in Australia.<br>"], ["created_at", "2017-02-26 06:38:10.708698"], ["updated_at", "2017-02-26 06:38:10.708698"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 10.5ms)
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=1&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 06:38:14 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>", "attribute"=>"value", "id"=>"1", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "phrasing_phrases" SET "value" = ?, "updated_at" = ? WHERE "phrasing_phrases"."id" = ?[0m  [["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>"], ["updated_at", "2017-02-26 06:38:14.103726"], ["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["phrasing_phrase_id", 1], ["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>"], ["created_at", "2017-02-26 06:38:14.105043"], ["updated_at", "2017-02-26 06:38:14.105043"]]
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 11.7ms)
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=1&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 06:38:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>", "attribute"=>"value", "id"=>"1", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 08:32:44 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.8ms)
+  Rendered nursery/_header.html.erb (3.0ms)
+  [1m[36mPhrasingPhrase Load (3.3ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (178.1ms)
+Completed 200 OK in 184ms (Views: 180.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/apple-touch-icon-120x120-precomposed.png" for 123.3.108.94 at 2017-02-26 08:32:45 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-120x120-precomposed.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.2ms)
+
+
+Started GET "/apple-touch-icon-120x120.png" for 123.3.108.94 at 2017-02-26 08:32:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-120x120.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.9ms)
+
+
+Started GET "/apple-touch-icon.png" for 123.3.108.94 at 2017-02-26 08:32:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/apple-touch-icon.png" for 123.3.108.94 at 2017-02-26 08:32:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.1ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 123.3.108.94 at 2017-02-26 08:32:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:14:18 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.1ms)
+  Rendered nursery/_header.html.erb (3.6ms)
+  [1m[35mPhrasingPhrase Load (77.8ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.1ms)
+  Rendered nursery/index.html.erb (125.3ms)
+Completed 200 OK in 129ms (Views: 50.3ms | ActiveRecord: 77.8ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:19 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:20 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 09:14:20 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 09:14:20 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:14:21 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:14:21 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 09:14:21 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:16:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.8ms)
+  Rendered nursery/_header.html.erb (2.9ms)
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (28.9ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 09:16:54 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:54 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:16:54 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:54 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:54 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 09:16:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:16:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:16:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 09:16:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:17:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (3.0ms)
+  Rendered nursery/_header.html.erb (9.8ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.3ms)
+  Rendered nursery/index.html.erb (426.8ms)
+Completed 200 OK in 445ms (Views: 434.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:55 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:17:56 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:17:57 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:19:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (0.9ms)
+  Rendered nursery/_header.html.erb (1.8ms)
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (44.7ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 09:19:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:19:13 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/phrasing" for 123.3.108.94 at 2017-02-26 09:20:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#index as HTML
+  [1m[35mPhrasingPhrase Load (0.3ms)[0m  SELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is not null)  ORDER BY "phrasing_phrases"."key" ASC  [["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is null)  ORDER BY "phrasing_phrases"."key" ASC[0m  [["locale", "en"]]
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "phrasing_phrases"."locale" FROM "phrasing_phrases"
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/index.html.haml within layouts/phrasing (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (1.0ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/phrasing/1/edit" for 123.3.108.94 at 2017-02-26 09:20:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrasingPhrase Load (0.3ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhrasingPhraseVersion Exists (0.2ms)[0m  SELECT  1 AS one FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ? LIMIT 1  [["phrasing_phrase_id", 1]]
+  [1m[36mPhrasingPhraseVersion Load (0.2ms)[0m  [1mSELECT "phrasing_phrase_versions".* FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ?[0m  [["phrasing_phrase_id", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/edit.html.haml within layouts/phrasing (47.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.1ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:36:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (2.6ms)
+  Rendered nursery/_header.html.erb (25.5ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (79.2ms)
+Completed 200 OK in 82ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:36:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:36:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:36:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:36:33 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.6ms)
+  Rendered nursery/_header.html.erb (1.3ms)
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "my-first-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (47.4ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:36:34 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:36:34 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:36:34 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:37:25 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (2.5ms)
+  Rendered nursery/_header.html.erb (1.9ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "homepage-intro"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.4ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND "phrasing_phrases"."key" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["locale", "en"], ["key", "homepage-intro"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?[0m  [["key", "homepage-intro"], ["locale", "en"]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "phrasing_phrases" ("locale", "key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locale", "en"], ["key", "homepage-intro"], ["value", "homepage-intro"], ["created_at", "2017-02-26 09:37:25.683855"], ["updated_at", "2017-02-26 09:37:25.683855"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (96.0ms)
+Completed 200 OK in 99ms (Views: 85.9ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/assets/base.self-3847a55ea11b7d216919326c4d9cc00772a39845ad1cb895bf96fbc16d1e3a5a.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:26 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:27 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:27 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c58805192fb5d928113b9dc942690847c42166a764f6a87e837ead4773ac29e5.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:27 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:27 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-664213cdedf6c18287f9b811a60f3e5759a72950c70737024155df20ef4161e6.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:27 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:28 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-02-26 09:37:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:37:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 09:37:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:37:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:37:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/icomoon-5e34bfdab7287646e1950d74802787fd95863577aa0fc4fa100950bac9a2d162.woff" for 123.3.108.94 at 2017-02-26 09:37:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_icon_edit_all-18bca3565b1a50e33406edacb0580ec865f2b9380f34c03f65cb3ed80656b57d.png" for 123.3.108.94 at 2017-02-26 09:37:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/phrasing/remote_update_phrase?attribute=value&id=2&klass=PhrasingPhrase" for 123.3.108.94 at 2017-02-26 09:37:40 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#remote_update_phrase as */*
+  Parameters: {"new_value"=>"Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>", "attribute"=>"value", "id"=>"2", "klass"=>"PhrasingPhrase"}
+Can't verify CSRF token authenticity
+  [1m[35mPhrasingPhrase Load (0.3ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "phrasing_phrases" SET "value" = ?, "updated_at" = ? WHERE "phrasing_phrases"."id" = ?  [["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>"], ["updated_at", "2017-02-26 09:37:40.066914"], ["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phrasing_phrase_id", 2], ["value", "Glenavon Nurseries has been supplying quality rootlings for over 20 years, which is why we are&nbsp;<br>one of the largest vine nurseries in Australia.<br>"], ["created_at", "2017-02-26 09:37:40.069234"], ["updated_at", "2017-02-26 09:37:40.069234"]]
+  [1m[35m (12.4ms)[0m  commit transaction
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/phrasing" for 123.3.108.94 at 2017-02-26 09:37:43 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#index as HTML
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is not null)  ORDER BY "phrasing_phrases"."key" ASC[0m  [["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is null)  ORDER BY "phrasing_phrases"."key" ASC  [["locale", "en"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "phrasing_phrases"."locale" FROM "phrasing_phrases"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/index.html.haml within layouts/phrasing (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/phrasing/1/edit" for 123.3.108.94 at 2017-02-26 09:37:47 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhrasingPhraseVersion Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ? LIMIT 1[0m  [["phrasing_phrase_id", 1]]
+  [1m[35mPhrasingPhraseVersion Load (0.1ms)[0m  SELECT "phrasing_phrase_versions".* FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ?  [["phrasing_phrase_id", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/edit.html.haml within layouts/phrasing (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/phrasing/1" for 123.3.108.94 at 2017-02-26 09:38:01 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/phrasing/1"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.0ms)
+
+
+Started GET "/phrasing/1/edit" for 123.3.108.94 at 2017-02-26 09:38:09 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhrasingPhraseVersion Exists (0.1ms)[0m  SELECT  1 AS one FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ? LIMIT 1  [["phrasing_phrase_id", 1]]
+  [1m[36mPhrasingPhraseVersion Load (0.1ms)[0m  [1mSELECT "phrasing_phrase_versions".* FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ?[0m  [["phrasing_phrase_id", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/edit.html.haml within layouts/phrasing (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/phrasing_engine.self-eea697537c69eee72380d17f59a04c5d849639051c3eda3ac2bc9a5b6d128a30.css?body=1" for 123.3.108.94 at 2017-02-26 09:38:10 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-02-26 09:38:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-02-26 09:38:11 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_engine.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 123.3.108.94 at 2017-02-26 09:38:12 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started DELETE "/phrasing/1" for 123.3.108.94 at 2017-02-26 09:38:22 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QcPPJxUN6KBRTbtjw+LHSlPehmRbuYrqOJ3ykTKFG3P+2rPoLSprfWEqxb3JNjp41SiOYGB5KXjhrI/Ssg6S4g==", "id"=>"1"}
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPhrasingPhraseVersion Load (0.1ms)[0m  SELECT "phrasing_phrase_versions".* FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."phrasing_phrase_id" = ?  [["phrasing_phrase_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "phrasing_phrase_versions" WHERE "phrasing_phrase_versions"."id" = ?  [["id", 4]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "phrasing_phrases" WHERE "phrasing_phrases"."id" = ?[0m  [["id", 1]]
+  [1m[35m (11.1ms)[0m  commit transaction
+Redirected to https://glenavonwebspace-alexcleggett.c9users.io/phrasing
+Completed 302 Found in 17ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/phrasing" for 123.3.108.94 at 2017-02-26 09:38:22 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#index as HTML
+  [1m[36mPhrasingPhrase Load (0.2ms)[0m  [1mSELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is not null)  ORDER BY "phrasing_phrases"."key" ASC[0m  [["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."locale" = ? AND (value is null)  ORDER BY "phrasing_phrases"."key" ASC  [["locale", "en"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "phrasing_phrases"."locale" FROM "phrasing_phrases"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/index.html.haml within layouts/phrasing (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.2ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/phrasing/help" for 123.3.108.94 at 2017-02-26 09:38:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhrasingPhrasesController#help as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing_phrases/help.html.haml within layouts/phrasing (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_menu.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_messages.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 123.3.108.94 at 2017-02-26 09:38:48 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (1.6ms)
+  Rendered nursery/_header.html.erb (1.0ms)
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "homepage-intro"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (0.0ms)
+  Rendered nursery/index.html.erb (44.5ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/vines.jpg" for 123.3.108.94 at 2017-02-26 09:38:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-02-26 09:38:49 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-02-26 09:38:50 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255

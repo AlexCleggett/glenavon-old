@@ -12,8 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require blueimp-gallery-all
- 
+ *= require phrasing 
  */
  
  body { 

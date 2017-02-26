@@ -15,6 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
-//= require blueimp-gallery-all
-
+//= require phrasing
 

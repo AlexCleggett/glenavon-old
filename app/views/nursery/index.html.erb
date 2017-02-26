@@ -12,14 +12,17 @@
         <%= stylesheet_link_tag "bootstrap" %>
         <%= stylesheet_link_tag "home" %>
         <%= stylesheet_link_tag "base" %>
-        
+        <%= stylesheet_link_tag "application" %>
+            
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <%= javascript_include_tag "application" %>
         
     </head>
     
     <body >
-        
+         <%= render 'phrasing/initializer' %>    
+
          <%= render 'header' %>
         
             <header id="myCarousel" class="carousel slide">
@@ -60,7 +63,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-center">Superior Quality</h1>
-                <p class="lead text-center">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products without collateral.</p>
+                <p class="lead text-center"><%= phrase('homepage-intro') %></p>
             </div>
         </div>
     </div>
