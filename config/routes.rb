@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'confirm' => 'nursery#confirm'
   get 'submit' => 'nursery#submit'
   get 'review' => 'nursery#review'
-
+  get '/nursery/for_sectionid/:id' => 'nursery#for_sectionid'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   

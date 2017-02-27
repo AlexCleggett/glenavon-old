@@ -11,9 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226062231) do
+ActiveRecord::Schema.define(version: 20170117064442) do
 
-  create_table "phrasing_phrase_versions", force: :cascade do |t|
+  create_table "clones", force: :cascade do |t|
+    t.string  "name"
+    t.string  "comment"
+    t.integer "vine_id"
+  end
+
+  create_table "customer_orders", force: :cascade do |t|
+    t.string  "business_name"
+    t.string  "address"
+    t.string  "contact_person"
+    t.string  "phone_number"
+    t.string  "mobile_number"
+    t.string  "email_address"
+    t.string  "month"
+    t.integer "year"
+  end
+
+  create_table "rootstocks", force: :cascade do |t|
+    t.string "name"
+    t.string "comment"
+  end
+
+  create_table "vine_orders", force: :cascade do |t|
+    t.string  "variety"
+    t.string  "clone"
+    t.string  "rootstock"
+    t.integer "quantity"
+    t.boolean "potted"
+    t.boolean "trimmed"
+    t.integer "customer_order_id"
+  end
+
+  create_table "vines", force: :cascade do |t|
+    t.string "name"
+    t.string "colour"
+    t.string "comment"
+  end
+  
+    create_table "phrasing_phrase_versions", force: :cascade do |t|
     t.integer  "phrasing_phrase_id"
     t.text     "value"
     t.datetime "created_at"

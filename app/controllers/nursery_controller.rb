@@ -1,4 +1,4 @@
-class NurseryController < ActionController::Base
+class NurseryController < ApplicationController
   
   def products
     @class1 = "about"
@@ -123,6 +123,21 @@ end
     redirect_to :action => :order
   end
   end
+
+
+
+def for_sectionid
+       
+      @clones = Vine.where(name: params[:id]).first.clones
+      respond_to do |format|
+        format.json  { render :json => @clones }      
+      end
+end
+
+
+
+
+
 
   # PATCH/PUT /customer_orders/1
   # PATCH/PUT /customer_orders/1.json
