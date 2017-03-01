@@ -128,6 +128,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     .modal-dialog{
         min-width: 760px;
         width: 75vw;
+        
     }
     .carousel-control .icon-prev, 
 .carousel-control .icon-next {

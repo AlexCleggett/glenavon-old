@@ -27947,3 +27947,337 @@ Processing by PhrasingPhrasesController#remote_update_phrase as */*
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "phrasing_phrase_versions" ("phrasing_phrase_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phrasing_phrase_id", 16], ["value", "See Our History"], ["created_at", "2017-03-01 11:21:41.541451"], ["updated_at", "2017-03-01 11:21:41.541451"]]
   [1m[35m (12.6ms)[0m  commit transaction
 Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/gallery" for 123.3.108.94 at 2017-03-01 11:46:39 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#gallery as HTML
+  Rendered nursery/_header.html.erb (1.8ms)
+  [1m[36mPhrasingPhrase Load (2.0ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "contact-us-header"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "contact-us-body"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "copyright-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (13.8ms)
+  Rendered nursery/gallery.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 158ms (Views: 154.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/base.self-25068b42ab53957b634cae2b7651962ba220e134e051fc5000e6bb96cf989f14.css?body=1" for 123.3.108.94 at 2017-03-01 11:46:41 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/gallery" for 123.3.108.94 at 2017-03-01 11:47:50 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#gallery as HTML
+  Rendered nursery/_header.html.erb (2.2ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "contact-us-header"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "contact-us-body"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "copyright-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (3.1ms)
+  Rendered nursery/gallery.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/base.self-fa4da8961eea5d7bcdb9c31d2a1f47ff737b738d5e810921e7fdcf7b596046dd.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-56a5c86523b8df4d74969eb820c89eebdfb3afaa01b34a44399ebed7d347e407.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:51 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0e16b7dbff9f8edb2c437ba6e91792af2cba126cf311b390a43322f3e2ea86a6.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:52 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-03-01 11:47:53 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/gallery" for 123.3.108.94 at 2017-03-01 11:50:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#gallery as HTML
+  Rendered nursery/_header.html.erb (1.1ms)
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "contact-us-header"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "contact-us-body"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "copyright-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (2.7ms)
+  Rendered nursery/gallery.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:29 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/base.self-880b6753f839e1579fe2348e828e586bcb3ca29667c2dc4f688a605839e26327.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-56a5c86523b8df4d74969eb820c89eebdfb3afaa01b34a44399ebed7d347e407.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0e16b7dbff9f8edb2c437ba6e91792af2cba126cf311b390a43322f3e2ea86a6.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:30 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:31 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:32 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:32 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-03-01 11:50:32 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-03-01 11:50:32 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-03-01 11:50:33 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/gallery" for 123.3.108.94 at 2017-03-01 11:52:16 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#gallery as HTML
+  Rendered nursery/_header.html.erb (1.4ms)
+  [1m[35mPhrasingPhrase Load (0.2ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "contact-us-header"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "contact-us-body"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "copyright-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (2.8ms)
+  Rendered nursery/gallery.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/base.self-00d2862cd5b3c0532f7b9fd225c2d752589fbecd78417e35a0ddb11796b1c4a2.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:16 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:16 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/print.self-0d791d757c82abba0ab368a8e6a192537e42cf4b6d8e686f26dbe892bb7f1a46.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-56a5c86523b8df4d74969eb820c89eebdfb3afaa01b34a44399ebed7d347e407.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0e16b7dbff9f8edb2c437ba6e91792af2cba126cf311b390a43322f3e2ea86a6.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_fonts.self-4d074ef4221bbbf7212f527bfc03b70460ae53454ed6258a2a7285eebc13113d.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing_edit_mode_bubble.self-52a1c56e595ec5424e8ad949e819da1de4a2a5271425fb8fd412a8570cca9645.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-4a339db5728dcff708800af45b7e127899342ede9be199878f4289de1fbf3db4.css?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/vine_order.self-4ee48d8cf1b7748835a81f585586cdec08e6fd2602622c9517ca4436eec8db3b.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cocoon.self-6874ad698cefd21cc1119b773550f61b5c1a60396460f015222af59293affe80.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/editor.self-f7bca907187cd8a03fda0241af23a3961766a06dd69d76ac5eb6e7a1f8c24d4b.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.cookie.self-54e6d8430dd88cc11eac236e182381bfa3c8b330d5931d49194ead92dc2ee600.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:17 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phrasing.self-f195c7e08338bcfd3abfd6986f36276a95e8440011874aed28c01d1cfc55f47a.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:18 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 123.3.108.94 at 2017-03-01 11:52:18 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.css.map" for 123.3.108.94 at 2017-03-01 11:52:18 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.css.map" for 123.3.108.94 at 2017-03-01 11:52:18 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 123.3.108.94 at 2017-03-01 14:13:58 +0000
+Cannot render console from 123.3.108.94! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NurseryController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/phrasing-3.2.10/app/views/phrasing/_initializer.html.haml (185.2ms)
+  Rendered nursery/_header.html.erb (1.3ms)
+  [1m[36mPhrasingPhrase Load (5.3ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "homepage-intro-header"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "homepage-intro-body"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "promo-item-1"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "promo-item-2"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "promo-item-3"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "mid-homepage-header"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "info-item-header-1"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "info-item-body-1"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "info-item-button-1"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "info-item-header-2"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "info-item-body-2"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "info-item-button-2"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "info-item-header-3"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "info-item-body-3"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "info-item-button-3"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "lower-homepage-header"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "lower-homepage-body"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "contact-us-header"], ["locale", "en"]]
+  [1m[36mPhrasingPhrase Load (0.1ms)[0m  [1mSELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1[0m  [["key", "contact-us-body"], ["locale", "en"]]
+  [1m[35mPhrasingPhrase Load (0.1ms)[0m  SELECT  "phrasing_phrases".* FROM "phrasing_phrases" WHERE "phrasing_phrases"."key" = ? AND "phrasing_phrases"."locale" = ?  ORDER BY "phrasing_phrases"."id" ASC LIMIT 1  [["key", "copyright-phrase"], ["locale", "en"]]
+  Rendered nursery/_footer.html.erb (2.5ms)
+  Rendered nursery/index.html.erb within layouts/application (218.5ms)
+Completed 200 OK in 402ms (Views: 394.6ms | ActiveRecord: 7.0ms)
