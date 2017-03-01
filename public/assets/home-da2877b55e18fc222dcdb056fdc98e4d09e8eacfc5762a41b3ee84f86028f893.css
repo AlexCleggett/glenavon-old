@@ -1,0 +1,87 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+body {
+  margin-top: 0px;
+}
+
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.feature {
+  background: url("/assets/images/Beautiful-Vineyard-Vines-Wallpaper.jpg");
+  background-position: top right;
+  background-size: cover;
+  background-color: #dd845a;
+  color: white;
+  text-shadow: 1px 1px 8px black;
+}
+
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.feature .btn {
+  text-shadow: none;
+}
+
+/* line 19, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo,
+.promo h3,
+.promo a:link,
+.promo a:visited,
+.promo a:hover,
+.promo a:active {
+  color: white;
+  text-shadow: 1px 1px 8px black;
+  text-decoration: none;
+}
+
+/* line 30, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item {
+  height: 200px;
+  line-height: 180px;
+  text-align: center;
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item:hover {
+  background-size: 110%;
+  border: 5px solid black;
+  line-height: 170px;
+}
+
+/* line 42, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item h3 {
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 49, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-1 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 53, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-2 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 57, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-3 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 61, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-1,
+.item-2,
+.item-3 {
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* line 70, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 75, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.footerimage {
+  margin: 0;
+  padding: 0;
+}

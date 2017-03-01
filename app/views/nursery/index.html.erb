@@ -4,36 +4,12 @@
          <%= render 'phrasing/initializer' %>    
 
          <%= render 'header' %>
-        
-            <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        <div class="container-fluid jumbotron-custom">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <%= image_tag("Beautiful-Vineyard-Vines-Wallpaper.jpg", :alt => "rss feed") %>
-            </div>
-            <div class="item">
-               <%= image_tag("Beautiful-Vineyard-Vines-Wallpaper.jpg", :alt => "rss feed") %>
-            </div>
-            <div class="item">
-                <%= image_tag("Beautiful-Vineyard-Vines-Wallpaper.jpg", :alt => "rss feed") %>
-            </div>
-        </div>
+    
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
+			</div>
+            
     
       <br>
       
@@ -42,8 +18,8 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center">Superior Quality</h1>
-                <p class="lead text-center"><%= phrase('homepage-intro') %></p>
+                <h1 class="text-center"><%= phrase('homepage-intro-header') %></h1>
+                <p class="lead text-center"><%= phrase('homepage-intro-body') %></p>
             </div>
         </div>
     </div>
@@ -55,14 +31,14 @@
         	  
 				<div class="col-md-4 promo-item item-1">
 					<h3>
-						Unleash
+						<%= phrase('promo-item-1') %>
 					</h3>
 				</div>
             </a>
             <a href="#">
 				<div class="col-md-4 promo-item item-2">
 					<h3>
-						Synergize
+						<%= phrase('promo-item-2') %>
 					</h3>
 				</div>
             </a>
@@ -70,7 +46,7 @@
 			<a href="#">
 				<div class="col-md-4 promo-item item-3">
 					<h3>
-						Procrastinate
+						<%= phrase('promo-item-3') %>
 					</h3>
 				</div>
             </a>
@@ -81,39 +57,39 @@
      <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Welcome to Modern Business
+                    <%= phrase('mid-homepage-header') %>
                 </h1>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h4>
+                        <h4><i class="fa fa-fw fa-check"></i><%= phrase('info-item-header-1') %></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p><%= phrase('info-item-body-1') %></p>
+                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-1') %></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                        <h4><i class="fa fa-fw fa-gift"></i><%= phrase('info-item-header-2') %></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p><%= phrase('info-item-body-2') %></p>
+                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-2') %></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                        <h4><i class="fa fa-fw fa-compass"></i><%= phrase('info-item-header-3') %></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p><%= phrase('info-item-body-3') %></p>
+                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-3') %></a>
                     </div>
                 </div>
             </div>
@@ -123,8 +99,8 @@
         <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center">Superior Quality</h1>
-                <p class="lead text-center">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products without collateral.</p>
+                <h1 class="text-center"><%= phrase('lower-homepage-header') %></h1>
+                <p class="lead text-center"><%= phrase('lower-homepage-body') %></p>
             </div>
         </div>
     </div>
@@ -132,13 +108,14 @@
   
 
 	
-		
+		<!--
 			
 			<div class="container-fluid footerimage">
 
     <%= image_tag("Beautiful-Vineyard-Vines-Wallpaper.jpg", :class => "img") %>
 
 			</div>
+			-->
  
         <%= render 'footer' %>
         

@@ -1,7 +1,8 @@
-
+body{
+    margin-top: 0px;
+}
  
  .feature {
-	background:  url("/assets/images/Beautiful-Vineyard-Vines-Wallpaper.jpg");
 	background-position: top right;
 	background-size: cover;
 	background-color: #dd845a;
@@ -76,6 +77,21 @@
    
 }
 
+.img-header {
+      max-width: 100%;
+    height: auto; 
 
+}
+
+	.jumbotron-custom{
+	    background-image: asset_url('headers/red-grapes.jpg');
+            background-size: 100% auto;
+            width: 100vw;
+            max-height: 100vh;
+            height: 67vw;
+             background-attachment: fixed;
+    background-repeat: no-repeat;
+	}
 	
+
 	

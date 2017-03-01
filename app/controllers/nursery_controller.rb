@@ -100,7 +100,7 @@ end
     
       if @customer_order.save
         
-        #CustomerMailer.new_order_email(@customer_order).deliver_now
+        CustomerMailer.confirmation_email(@customer_order).deliver_later
         session[:order]=@customer_order.id
         @params = session[:order]
         redirect_to review_path

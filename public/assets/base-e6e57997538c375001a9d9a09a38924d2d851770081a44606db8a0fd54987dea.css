@@ -1,0 +1,131 @@
+body { 
+     margin:0;
+     margin-top: 50px;
+     
+ }
+ 
+ .navbar {
+     margin-bottom:0 !important;
+ }
+ 
+
+ 
+ li {
+    
+     text-align: center;
+     
+ }
+ 
+
+
+ 
+ .footer-info {
+    
+    background: #333333;
+    padding-bottom: 10px;
+    
+}
+
+.footer-info,
+.footer-info a:link,
+.footer-info a:hover,
+.footer-info a:focus,
+.footer-info a:visited {
+    color: #DDDDDD;
+	}
+
+.footer-info h3 {
+	color: #DDDDDD;
+	font-size: 18px;
+	text-align: center;
+	}
+    
+.footer-info-item {
+    padding: 0px 20px;
+    
+    }
+    
+    .ab, .list-unstyled, .footer-info-item {
+        color: #009900;
+    }
+    
+.small-print {
+   
+	background-color: #fff;
+	padding-top: 10px;
+	
+	text-align: center;
+}
+
+.form-inner{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+}
+
+.form-outer{
+    background-color: #BBB;
+}
+  
+
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+    font-size: 50px;
+}
+
+
+
+.gallery-container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.varieties-container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-body{
+    padding: 0;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .modal-dialog{
+        min-width: 760px;
+        width: 75vw;
+    }
+    .carousel-control .icon-prev, 
+.carousel-control .icon-next {
+    font-size: 75px;
+}
+ 
+}
+
+ 
+ .carousel-caption{
+     padding: 0;
+ }
+ 
+ .carousel-caption p{
+     margin: 0;
+ }
+ 
+.nav-tabs > li, .nav-pills > li {
+    margin-top: 50px;
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
