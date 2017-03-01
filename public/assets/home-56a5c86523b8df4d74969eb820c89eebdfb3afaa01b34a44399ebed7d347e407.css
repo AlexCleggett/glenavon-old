@@ -1,0 +1,103 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+body {
+  margin-top: 0px;
+}
+
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.feature {
+  background-position: top right;
+  background-size: cover;
+  background-color: #dd845a;
+  color: white;
+  text-shadow: 1px 1px 8px black;
+}
+
+/* line 13, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.feature .btn {
+  text-shadow: none;
+}
+
+/* line 18, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo,
+.promo h3,
+.promo a:link,
+.promo a:visited,
+.promo a:hover,
+.promo a:active {
+  color: white;
+  text-shadow: 1px 1px 8px black;
+  text-decoration: none;
+}
+
+/* line 29, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item {
+  height: 200px;
+  line-height: 180px;
+  text-align: center;
+}
+
+/* line 35, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item:hover {
+  background-size: 110%;
+  border: 5px solid black;
+  line-height: 170px;
+}
+
+/* line 41, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.promo-item h3 {
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 48, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-1 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 52, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-2 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 56, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-3 {
+  background: url(/assets/vines-a60a90c4fb30bfb2475a6bac03e86e16efe1f6dc8b793e98d4cf8afaaab408a6.jpg);
+}
+
+/* line 60, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.item-1,
+.item-2,
+.item-3 {
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* line 69, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 74, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.footerimage {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 80, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.img-header {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 86, /home/ubuntu/workspace/app/assets/stylesheets/home.css.scss */
+.jumbotron-custom {
+  background-image: url(/assets/headers/red-grapes-9df26e6154122a82510affbd34de69c1e254f31c95dbd287eb8bc3ae510076ca.jpg);
+  background-size: 100% auto;
+  width: 100vw;
+  max-height: 100vh;
+  height: 67vw;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
