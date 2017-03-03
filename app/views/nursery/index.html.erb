@@ -4,10 +4,17 @@
          <%= render 'phrasing/initializer' %>    
 
          <%= render 'header' %>
-        <div class="container-fluid jumbotron-custom">
 
-    
-
+            <div class="jumbotron">
+                <div class="container-fluid jumbo-content">
+            <h1><%= phrase('jumbotron-header') %></h1>
+      <p><%= phrase('jumbotron-body') %></p>
+      
+      <p>
+          <%= link_to phrase('jumbotron-button'), order_path, :class => "btn btn-primary btn-lg" %>
+      </p>
+  
+</div>
 			</div>
             
     
@@ -24,35 +31,112 @@
         </div>
     </div>
     <br>
-    <div class="container-fluid">
-        <div class="row promo">
-          <div class="col-sm-12">
-        	<a href="#">
-        	  
-				<div class="col-md-4 promo-item item-1">
-					<h3>
-						<%= phrase('promo-item-1') %>
-					</h3>
-				</div>
-            </a>
-            <a href="#">
-				<div class="col-md-4 promo-item item-2">
-					<h3>
-						<%= phrase('promo-item-2') %>
-					</h3>
-				</div>
-            </a>
+    
+
+		<div class="container-fluid">
 			
-			<a href="#">
-				<div class="col-md-4 promo-item item-3">
-					<h3>
-						<%= phrase('promo-item-3') %>
-					</h3>
+			<div class="agileits_banner_bottom_grids">
+				<div class="col-md-4 agileits_banner_bottom_grid">
+					<div class="hovereffect w3ls_banner_bottom_grid">
+					    <%= link_to products_path do %>
+						<%= image_tag("vines.jpg", :alt => "rss feed", :class => "img-responsive") %>
+
+						<div class="overlay">
+						   <h4><%= phrase('promo-item-1-header') %></h4>
+						   <p><%= phrase('promo-item-1-body') %></p>
+						</div>
+						<% end %>
+					</div>
 				</div>
-            </a>
-        </div>
-        </div>
-    </div><!-- /.container-fluid -->
+				<div class="col-md-4 agileits_banner_bottom_grid">
+					<div class="hovereffect w3ls_banner_bottom_grid">
+					    <%= link_to "#" do %>
+						<%= image_tag("vines.jpg", :alt => "rss feed", :class => "img-responsive") %>
+
+						<div class="overlay">
+						   <h4><%= phrase('promo-item-2-header') %></h4>
+						   <p><%= phrase('promo-item-2-body') %></p>
+						</div>
+						<% end %>
+					</div>
+				</div>
+				<div class="col-md-4 agileits_banner_bottom_grid">
+					<div class="hovereffect w3ls_banner_bottom_grid">
+					    <%= link_to varieties_path do %>
+						<%= image_tag("vines.jpg", :alt => "rss feed", :class => "img-responsive") %>
+
+						<div class="overlay">
+						   <h4><%= phrase('promo-item-3-header') %></h4>
+						   <p><%= phrase('promo-item-3-body') %></p>
+						</div>
+						<% end %>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+    <!-- services -->
+	<div class="about services" id="services"> 
+		<div class="container"> 
+			<div class="agileits-title"> 
+				<div class="col-md-6 agileits-title-left">
+					<h6>- What we do</h6>
+					<h3>Our Services</h3>
+				</div>
+				<div class="col-md-6 agileits-title-right">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at placerat ante. Praesent nulla nunc, pretium dapibus efficitur in, auctor eget elit. Lorem ipsum dolor sit amet</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="services-w3ls-row">
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+					<div class="w3agile-servs-img">
+						<div class="icon-holder">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						</div>
+						<h4 class="mission">Fugiat Quo</h4>
+						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+					<div class="w3agile-servs-img">
+						<div class="icon-holder">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</div>
+						<h4 class="mission">Voluptas </h4>
+						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+					<div class="w3agile-servs-img">
+						<div class="icon-holder">
+							<span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+						</div>
+						<h4 class="mission">Quo fugiat</h4>
+						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
+					</div>
+				</div> 	
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+					<div class="w3agile-servs-img">
+						<div class="icon-holder">
+							<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+						</div>
+						<h4 class="mission">Voluptas</h4>
+						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
+					</div>
+				</div> 
+				<div class="clearfix"> </div>
+			</div>	 
+		</div>
+	</div>
+	<!-- //services --> 
+
+
+
+<!-- //banner-bottom -->
+						
+    
       <div class="container-fluid">
      <div class="row">
             <div class="col-lg-12">

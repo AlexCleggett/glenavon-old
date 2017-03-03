@@ -30,7 +30,7 @@
                                           <% @images.each_with_index do |image, index| %>
                                             <div class="item <%= 'active' if index == 0 %>">
                                         
-                                              <%= image_tag "carousel/#{image.split('/').last}", :alt => image %>
+                                              <%= image_tag "carousel/#{image.split('/').last}", :alt => image, :class => "img-responsive" %>
                                                 <div class="carousel-caption">
                                                 
                                                     <p>This is the description.</p>
