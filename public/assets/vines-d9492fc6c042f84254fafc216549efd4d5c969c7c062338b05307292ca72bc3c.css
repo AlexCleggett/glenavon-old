@@ -1,0 +1,25 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/vines.css.scss */
+body {
+  margin-top: 0px;
+}
+
+/* line 7, /home/ubuntu/workspace/app/assets/stylesheets/vines.css.scss */
+.form-outer {
+  background-image: url(/assets/headers/Caro-vineyard-0730e04769c172aede7b8a9cf2a1ce3df7193e9309c10e4aa1efcf3ca944d6be.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 0;
+  padding-top: 15px;
+  height: 100vh;
+}
+
+/* line 18, /home/ubuntu/workspace/app/assets/stylesheets/vines.css.scss */
+.form-inner {
+  color: black;
+  margin-top: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+}
