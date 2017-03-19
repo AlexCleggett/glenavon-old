@@ -6,9 +6,9 @@ Rails.application.routes.draw do
    root 'nursery#index'
    
   get 'products' => 'nursery#products'
-  get 'accreditations' => 'nursery#accreditations'
+  get 'about' => 'nursery#about'
   get 'gallery' => 'nursery#gallery'
-  get 'history' => 'nursery#history'
+  get 'surplus' => 'nursery#surplus'
   get 'index' => 'nursery#index'
   get 'links' => 'nursery#links'
   get 'order' => 'nursery#order'

@@ -2,7 +2,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-6 footer-info-item contact-info">
-						<h3><%= phrase('contact-us-header') %></h3>
+						<a data-toggle="modal" href="#" data-target="#myModal"><h3 ><span class="glyphicon glyphicon-envelope"></span>  <%= phrase('contact-us-header') %></h3></a>
 						<ul class="list-unstyled">
 							<li><%= phrase('contact-us-body') %></li>
 						</ul>
@@ -26,3 +26,22 @@
         	</div>
         </div>
         
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

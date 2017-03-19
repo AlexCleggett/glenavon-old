@@ -7,22 +7,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">Glenavon Nurseries</a>
+      <a class="navbar-brand" href="/">Glenavon Nurseries</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
-      <li class= "<%= @class1 == 'home' ? 'current' : ''%>"><%= link_to "Home", :controller => :nursery, :action => :index %></li>
-      <li class= "<%= @class1 == 'about' ? 'dropdown current' : 'dropdown' %>">
-        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="products">About Us
+      <li class= "<%= @class1 == 'about' ? 'current' : ''%>"><%= link_to "About Us", :controller => :nursery, :action => :about %></li>
+      <li class= "<%= @class1 == 'order' ? 'current' : ''%>"><%= link_to "Order Vines", :controller => :nursery, :action => :order %></li>
+      <li class= "<%= @class1 == 'vines' ? 'dropdown current' : 'dropdown' %>">
+        <a class="dropdown-toggle disabled" data-toggle="dropdown" href="varieties">Our Vines
         <span class="caret"></span></a>
         <ul class="dropdown-menu inverse-dropdown">
-          <li class= "<%= @class2 == 'products' ? 'current' : ''%>"><%= link_to "Products And Services", :controller => :nursery, :action => :products %></li>
-          <li class= "<%= @class2 == 'history' ? 'current' : ''%>"><%= link_to "History", :controller => :nursery, :action => :history %></li>
-          <li class= "<%= @class2 == 'accreditations' ? 'current' : ''%>"><%= link_to "Accreditations", :controller => :nursery, :action => :accreditations %></li>
+          <li class= "<%= @class2 == 'varieties' ? 'current' : ''%>"><%= link_to "Varieties", :controller => :nursery, :action => :varieties %></li>
+          <li class= "<%= @class2 == 'products' ? 'current' : ''%>"><%= link_to "Products and Services", :controller => :nursery, :action => :products %></li>
+          <li class= "<%= @class2 == 'surplus' ? 'current' : ''%>"><%= link_to "Surplus Vines", :controller => :nursery, :action => :surplus %></li>
         </ul>
       </li>
-      <li class= "<%= @class1 == 'order' ? 'current' : ''%>"><%= link_to "Order Vines", :controller => :nursery, :action => :order %></li>
-      <li class= "<%= @class1 == 'varieties' ? 'current' : ''%>"><%= link_to "Varieties", :controller => :nursery, :action => :varieties %></li>
       <li class= "<%= @class1 == 'info' ? 'dropdown current' : 'dropdown' %>">
         <a class="dropdown-toggle disabled" data-toggle="dropdown" href="gallery">Extra Info
         <span class="caret"></span></a>

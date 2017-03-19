@@ -1,13 +1,8 @@
 class NurseryController < ApplicationController
   
   def products
-    @class1 = "about"
+    @class1 = "vines"
     @class2 = "products"
-  end
-  
-  def accreditations
-    @class1 = "about"
-    @class2 = "accreditations"
   end
   
   def gallery
@@ -16,9 +11,9 @@ class NurseryController < ApplicationController
     @images = Dir.glob("app/assets/images/carousel/*.jpg")
   end
   
-  def history
-    @class1 = "about"
-    @class2 = "history"
+  def surplus
+    @class1 = "vines"
+    @class2 = "surplus"
   end
   
   def links
@@ -26,14 +21,17 @@ class NurseryController < ApplicationController
     @class2 = "links"
   end
   
-  
+  def about
+    @class1 = "about"
+  end
   
    def index
      @class1 = "home"
    end
    
    def varieties
-      @class1 = "varieties"
+      @class1 = "vines"
+      @class2 = "varieties"
       @vines = Vine.all
       @rootstocks = Rootstock.all
    end

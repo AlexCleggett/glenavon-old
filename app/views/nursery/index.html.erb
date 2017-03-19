@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center"><%= phrase('homepage-intro-header') %></h1>
+                <h1 class="text-center page-header"><%= phrase('homepage-intro-header') %></h1>
                 <p class="lead text-center"><%= phrase('homepage-intro-body') %></p>
             </div>
         </div>
@@ -50,7 +50,7 @@
 				</div>
 				<div class="col-md-4 agileits_banner_bottom_grid">
 					<div class="hovereffect w3ls_banner_bottom_grid">
-					    <%= link_to "#" do %>
+					    <%= link_to surplus_path do %>
 						<%= image_tag("vines.jpg", :alt => "rss feed", :class => "img-responsive") %>
 
 						<div class="overlay">
@@ -89,43 +89,39 @@
 
 
 			<div class="services-w3ls-row">
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+				<div class="col-md-4 col-sm-4 services-grids">
+				    <%= link_to about_path do %>
 					<div class="w3agile-servs-img">
 						<div class="icon-holder">
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 						</div>
-						<h4 class="mission">Fugiat Quo</h4>
+						<h4 class="mission">About Us</h4>
 						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
 					</div>
+					<% end %>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+				<div class="col-md-4 col-sm-4  services-grids">
+				    <%= link_to planting_path do %>
 					<div class="w3agile-servs-img">
 						<div class="icon-holder">
-							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
 						</div>
-						<h4 class="mission">Voluptas </h4>
+						<h4 class="mission">Planting Guide</h4>
 						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
 					</div>
+					<% end %>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
+				<div class="col-md-4 col-sm-4  services-grids">
+				    <%= link_to gallery_path do %>
 					<div class="w3agile-servs-img">
 						<div class="icon-holder">
-							<span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
 						</div>
-						<h4 class="mission">Quo fugiat</h4>
+						<h4 class="mission">Gallery</h4>
 						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
 					</div>
+					<% end %>
 				</div> 	
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grids">
-					<div class="w3agile-servs-img">
-						<div class="icon-holder">
-							<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
-						</div>
-						<h4 class="mission">Voluptas</h4>
-						<p class="description">Phasellus at placerat ante nulla adipiscing elit</p>
-					</div>
-				</div> 
-				<div class="clearfix"> </div>
 			</div>	 
 		</div>
 	</div>
@@ -136,51 +132,23 @@
 
 
 <!-- //banner-bottom -->
-						
+			<!-- Stats -->
+	<div class="stats w3layouts agileits" id="stats">
+		<div class="container">
+
+			
+
+			
+		</div>
+
+	</div>
+	<!-- //Stats -->			
     
-      <div class="container-fluid">
-     <div class="row">
-            
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i><%= phrase('info-item-header-1') %></h4>
-                    </div>
-                    <div class="panel-body">
-                        <p><%= phrase('info-item-body-1') %></p>
-                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-1') %></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i><%= phrase('info-item-header-2') %></h4>
-                    </div>
-                    <div class="panel-body">
-                        <p><%= phrase('info-item-body-2') %></p>
-                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-2') %></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i><%= phrase('info-item-header-3') %></h4>
-                    </div>
-                    <div class="panel-body">
-                        <p><%= phrase('info-item-body-3') %></p>
-                        <a href="#" class="btn btn-default"><%= phrase('info-item-button-3') %></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
+  
         <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center"><%= phrase('lower-homepage-header') %></h1>
+                <h1 class="text-center page-header"><%= phrase('lower-homepage-header') %></h1>
                 <p class="lead text-center"><%= phrase('lower-homepage-body') %></p>
             </div>
         </div>
