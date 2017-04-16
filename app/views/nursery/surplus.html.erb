@@ -1,34 +1,30 @@
 <%= stylesheet_link_tag "vines" %>
+<%= javascript_include_tag "sort_script" %>
          <%= render 'header' %>
 <div class="form-outer">
 <div class="container-fluid form-inner">
 <div class= "table-responsive">
   <h2>Hover Rows</h2>
   <p>The .table-hover class enables a hover state on table rows:</p>            
-  <table class="table table-condensed table-hover">
+  <table class="table table-hover sortable">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th class="col-sm-3">Variety</th>
+        <th class="col-sm-3">Clone</th>
+        <th class="col-sm-3">Rootstock</th>
+        <th class="col-sm-3">Quantity</th>
       </tr>
     </thead>
     <tbody>
+      <% @surplus_vines.each do |vines| %>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td class="col-sm-3"><%= vines.variety %></td>
+        <td class="col-sm-3"><%= vines.clone %></td>
+        <td class="col-sm-3"><%= vines.rootstock %></td>
+        <td class="col-sm-3"><%= vines.quantity %></td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      <% end %>
+    
     </tbody>
   </table>
 </div>

@@ -8,6 +8,7 @@ Rails.application.config.assets.precompile += %w( vines.css )
 Rails.application.config.assets.precompile += %w( vine_order.js )
 Rails.application.config.assets.precompile += %w( print.css )
 Rails.application.config.assets.precompile += %w( order.css )
+Rails.application.config.assets.precompile += %w( sort_script.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

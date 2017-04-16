@@ -14,6 +14,7 @@ class NurseryController < ApplicationController
   def surplus
     @class1 = "vines"
     @class2 = "surplus"
+    @surplus_vines = VineOrder.all
   end
   
   def links
